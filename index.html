@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đại Cương Lịch Sử Việt Nam — Bách Khoa Toàn Thư Điện Tử</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="detailModal" class="modal-overlay" role="dialog" aria-hidden="true">
+    <div class="modal-container">
+      <span class="close-modal" id="closeModalBtn" title="Đóng hộp thoại">&times;</span>
+      <div class="modal-header">
+        <span id="modal-badge" class="modal-badge">KỶ NGUYÊN</span>
+        <h3 id="modal-title" class="modal-title">Tiêu đề Sự kiện</h3>
+      </div>
+      <div class="modal-body">
+        <div id="modal-body-content" class="modal-content-text">
+          Nội dung chi tiết lịch sử sẽ tự động tải vào đây qua JavaScript...
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span>Bách khoa toàn thư Lịch sử Việt Nam</span>
+      </div>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="flag-icon">🇻🇳</span> Sử Việt Toàn Thư
+      </a>
+      <ul class="nav-links">
+        <li><a href="#timeline" class="nav-link-item">Tiến Trình Niên Đại</a></li>
+        <li><a href="#figures" class="nav-link-item">Anh Hùng Dân Tộc</a></li>
+        <li><a href="#hungvan-section" class="nav-link-item">Hùng Văn Tuyên Ngôn</a></li>
+      </ul>
+      <div class="nav-search">
+        <input type="text" id="searchHistory" placeholder="Tìm kiếm sự kiện, nhân vật...">
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="dragon-bg">🐉</div>
+    <div class="hero-wrapper">
+      <p class="hero-badge">Hào Khí Đông NAM — Bốn Ngàn Năm Văn Hiến</p>
+      <h1 class="hero-title">
+        Đại Cương<br>
+        <span>Lịch Sử Việt Nam</span>
+      </h1>
+      <p class="hero-sub">Hành trình dựng nước và giữ nước trường kỳ của dân tộc từ buổi bình minh lịch sử đến thời đại Hồ Chí Minh vĩ đại</p>
+      <div class="hero-actions">
+        <a href="#timeline" class="btn btn-primary">Khám Phá Niên Đại</a>
+        <a href="#figures" class="btn btn-secondary">Danh Nhân Sử Việt</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>CUỘN XUỐNG ĐỂ KHÁM PHÁ</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="section-heading">
+      <p class="section-subtitle">BIÊN NIÊN SỬ DIÊN CÁCH</p>
+      <h2>Dòng Chảy Kỷ Nguyên</h2>
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <div class="timeline-container">
+      <div class="timeline-left-panel">
+        <div class="sticky-content">
+          <h3 class="sticky-title">Kính Ngưỡng Tiền Nhân</h3>
+          <p class="sticky-desc">Hệ thống ghi chép và tái hiện trung thực các thời kỳ lịch sử then chốt. Nhấp chuột vào bất kỳ mốc thời gian nào để truy xuất tư liệu chi tiết.</p>
+          
+          <div class="filter-group">
+            <span class="filter-label">Bộ lọc kỷ nguyên:</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">Tất cả</button>
+              <button class="filter-btn" data-filter="dynasty">Triều Đại</button>
+              <button class="filter-btn" data-filter="war">Kháng Chiến</button>
+              <button class="filter-btn" data-filter="independence">Độc Lập</button>
+            </div>
+          </div>
+          <div class="sticky-decor">📜</div>
+        </div>
+      </div>
+
+      <div class="timeline-right-items" id="timeline-box">
+        </div>
+    </div>
+  </section>
+
+  <section id="figures">
+    <div class="section-heading">
+      <p class="section-subtitle">VỊ QUỐC VONG THÂN — THIÊN CỔ LƯU DANH</p>
+      <h2>Bảng Vàng Anh Kiệt</h2>
+      <div class="divider">
+        <span class="divider-line"></span><span class="divider-diamond">◆</span><span class="divider-line"></span>
+      </div>
+    </div>
+    <div class="figures-grid" id="figures-box">
+      </div>
+  </section>
+
+  <section id="quote-section">
+    <div class="quote-overlay"></div>
+    <div class="quote-container">
+      <div class="section-heading">
+        <span class="section-subtitle">Lời sấm truyền bất tử</span>
+        <h2>HÙNG VĂN TUYÊN NGÔN</h2>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-diamond">🐉</div>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+
+      <div class="quote-icon-decor">❝</div>
+      <blockquote id="quote-text">
+        "Nam quốc sơn hà Nam đế cư, Tuyệt nhiên định phận tại thiên thư. Như hà nghịch lỗ lai xâm phạm, Nhữ đẳng hành khan thủ bại hư."
+        <cite>— Thái úy Lý Thường Kiệt, Bản tuyên ngôn độc lập đầu tiên (1077)</cite>
+      </blockquote>
+      
+      <div class="quote-controls">
+        <button class="quote-btn active" onclick="changeQuote(0)">Lý Thường Kiệt</button>
+        <button class="quote-btn" onclick="changeQuote(1)">Trần Hưng Đạo</button>
+        <button class="quote-btn" onclick="changeQuote(2)">Nguyễn Trãi</button>
+        <button class="quote-btn" onclick="changeQuote(3)">Quang Trung</button>
+        <button class="quote-btn" onclick="changeQuote(4)">Hồ Chí Minh</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="hungvan-section">
+    <div class="hungvan-container">
+      <div class="hungvan-header">
+        <span class="hungvan-subtitle">TINH HOA LỊCH SỬ</span>
+        <h2 class="hungvan-title">BA ÁNG HÙNG VĂN TUYÊN NGÔN</h2>
+        <div class="hungvan-deco">⚡ ❖ ⚡</div>
+      </div>
+
+      <div class="hungvan-tabs">
+        <button class="hungvan-tab-btn active" onclick="window.switchDeclaration(0)">
+          <span class="hungvan-tab-year">1077</span>
+          <span class="hungvan-tab-name">Nam Quốc Sơn Hà</span>
+        </button>
+        <button class="hungvan-tab-btn" onclick="window.switchDeclaration(1)">
+          <span class="hungvan-tab-year">1428</span>
+          <span class="hungvan-tab-name">Bình Ngô Đại Cáo</span>
+        </button>
+        <button class="hungvan-tab-btn" onclick="window.switchDeclaration(2)">
+          <span class="hungvan-tab-year">1945</span>
+          <span class="hungvan-tab-name">Tuyên Ngôn Độc Lập</span>
+        </button>
+      </div>
+
+      <div class="hungvan-scroll">
+        <div class="hungvan-wood"></div>
+        <div class="hungvan-body" id="hungvan-content">
+          <div class="hungvan-package animate-fade">
+            <h3 class="hungvan-content-title">NAM QUỐC SƠN HÀ</h3>
+            <p class="hungvan-meta"><b>Tác giả:</b> Thái úy Lý Thường Kiệt | <b>Hoàn cảnh:</b> Kháng chiến chống Tống (1077)</p>
+            
+            <div class="hungvan-text han-nom">
+              南 國 山 河 南 帝 居<br>
+              截 然 定 分 在 天 書<br>
+              如 何 逆 虜 來 侵 犯<br>
+              汝 等 行 看 取 敗 虛
+            </div>
+            
+            <div class="hungvan-text phonetic">
+              <strong>Phiên âm chữ Hán:</strong><br>
+              Nam quốc sơn hà Nam đế cư,<br>
+              Tuyệt nhiên định phận tại thiên thư.<br>
+              Như hà nghịch lỗ lai xâm phạm,<br>
+              Nhữ đẳng hành khan thủ bại hư.
+            </div>
+
+            <div class="hungvan-text translation">
+              <strong>Dịch thơ:</strong><br>
+              Sông núi nước Nam vua Nam ở,<br>
+              Vành vạnh sách trời chia xứ sở.<br>
+              Giặc dữ cớ sao phạm cõi này,<br>
+              Chúng mày nhất định phải tan vỡ!
+            </div>
+          </div>
+        </div>
+        <div class="hungvan-wood"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>SỬ VIỆT TOÀN THƯ</h4>
+          <p>Tôn vinh nguồn cội — Hiểu sâu quá khứ — Kiến tạo tương lai.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dự Án Bách Khoa Toàn Thư Lịch Sử Việt Nam Điện Tử.</p>
+        <p>Thiết kế mang phong cách cổ kính, trang trọng.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
